@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta content="#075e54" name="theme-color" />
+  <meta content="#075e54" name="msapplication-navbutton-color" />
   <meta property="og:title" content="Video Call" />
   <meta property="og:description" content="Video call, chat seru &amp; rahasia!" />
   <meta property="og:type" content="website" />
@@ -36,7 +38,6 @@
       max-width: 600px;
       margin: auto;
       background: #ece5dd;
-      border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, .1);
       display: flex;
       flex-direction: column;
@@ -84,7 +85,10 @@
       overflow: auto;
       display: flex;
       flex-direction: column;
+      scroll-behavior: smooth;
       gap: 10px;
+      margin-bottom: 70px;
+      /* agar tidak ketutupan input bar */
     }
 
     img.chat-img {
@@ -161,11 +165,18 @@
     }
 
     .wa-input-bar {
-      display: flex;
-      align-items: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
       background: #fff;
       border-top: 1px solid #ccc;
-      padding: 8px 10px
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
     }
 
     .wa-input {
@@ -260,3 +271,4 @@
 </body>
 
 </html>
+
